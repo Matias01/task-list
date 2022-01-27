@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ButtonComponent implements OnInit {
   @Input() text: string = "";
   @Input() color: string = "";
-  @Output() btnCllick = new EventEmitter() /* Esto se hace para llevarlo al header*/
+  @Output() btnClick = new EventEmitter() /* Esto se hace para llevarlo al header*/
   
   constructor() { }
 
@@ -16,6 +16,6 @@ export class ButtonComponent implements OnInit {
   }
 
   onClick(){
-    
+    this.btnClick.emit();
   }
 }
